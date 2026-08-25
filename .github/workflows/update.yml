@@ -6,27 +6,27 @@ on:
   workflow_dispatch:
 
 jobs:
-  bu*ld:
+  build:
     runs-on: ubuntu-latest
 
-  * steps:
-      - uses: actions/chec*out@v4
+    steps:
+      - uses: actions/checkout@v4
 
-      - name: Installation*Python
-        uses: actions/setup*python@v5
+      - name: Installation Python
+        uses: actions/setup-python@v5
         with:
-          *ython-version: '3.12'
+          python-version: '3.12'
 
-*     - name: Installation dépendan*es
-        run: pip install -r req*irements.txt
+      - name: Installation dépendances
+        run: pip install -r requirements.txt
 
-      - name: Généra*ion image
-        run: python date*semaine.py
+      - name: Génération image
+        run: python date_semaine.py
 
-      - name: Commit i*age
+      - name: Commit image
         run: |
-          git c*nfig --global user.name "github-ac*ions"
-          git config --globa* user.email "github-actions@github*com"
-          git add date_semain*.png
-          git commit -m "Mise*à jour automatique" || exit 0
-    *     git push
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add date_semaine.png
+          git commit -m "Mise à jour automatique" || exit 0
+          git push
