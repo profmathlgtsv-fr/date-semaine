@@ -1,0 +1,32 @@
+name: Mise à jour image
+
+on:
+  schedule:
+    - cron: '5 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  bu*ld:
+    runs-on: ubuntu-latest
+
+  * steps:
+      - uses: actions/chec*out@v4
+
+      - name: Installation*Python
+        uses: actions/setup*python@v5
+        with:
+          *ython-version: '3.12'
+
+*     - name: Installation dépendan*es
+        run: pip install -r req*irements.txt
+
+      - name: Généra*ion image
+        run: python date*semaine.py
+
+      - name: Commit i*age
+        run: |
+          git c*nfig --global user.name "github-ac*ions"
+          git config --globa* user.email "github-actions@github*com"
+          git add date_semain*.png
+          git commit -m "Mise*à jour automatique" || exit 0
+    *     git push
