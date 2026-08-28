@@ -36,7 +36,8 @@ REFERENCE = date(2026, 8, 31)  # semaine A
 # CALCUL SEMAINE A/B (ton code d'origine)
 # ====================================================
 
-aujourdhui = date(2026, 9, 7)
+aujourdhui = date.today()
+
 nb_semaines = (aujourdhui - REFERENCE).days // 7
 
 semaine = "A" if nb_semaines % 2 == 0 else "B"
