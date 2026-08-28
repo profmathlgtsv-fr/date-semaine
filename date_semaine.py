@@ -12,7 +12,7 @@ FICHIER_FOND = os.path.join(DOSSIER_ASSETS, "background.png") # Image sans le te
 FICHIER_POLICE_SERIF = os.path.join(DOSSIER_ASSETS, "times.ttf") # Pour le parchemin
 FICHIER_POLICE_SANS = os.path.join(DOSSIER_ASSETS, "DejaVuSans-Bold.ttf")   # Pour la semaine
 
-FICHIER_SORTIE = "date_semaine_atrium.png"
+FICHIER_SORTIE = "date_semaine.png"
 
 # Paramètres de style
 COULEUR_DATE = (80, 0, 0)       # Rouge foncé/bordeaux pour le parchemin
